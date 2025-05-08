@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbabwe Drought Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://www.zim.gov.zw/images/2019Cabinet/placeholder001.jpg" alt="Zimbabwe Drought Management System">
+                <h1>Zimbabwe Drought Management System</h1>
+            </div>
+            <div class="header-tools">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="language-selector">
+                    <select>
+                        <option value="en">English</option>
+                        <option value="sn">Shona</option>
+                        <option value="nd">Ndebele</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="conditions.html">Current Conditions</a></li>
+                <li><a href="planning.html">Planning & Preparedness</a></li>
+                <li><a href="mitigation.html">Mitigation & Response</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+  <!-- Hero Banner -->
+<section class="hero" style="background-image: url('https://wmo.int/sites/default/files/news/featured_media/shutterstock_75311899.jpg');">
+    <div class="container">
+        <div class="drought-alert alert-level-high">
+            <h2>Current Drought Alert: <span>Severe Drought Conditions</span></h2>
+            <p>Updated: <span id="current-date"></span></p>
+            <p>Emergency Hotline: <strong>0786 147 884</strong></p>
+        </div>
+    </div>
+</section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Interactive Map Section -->
+        <!-- Interactive Map Section -->
+<section class="map-section">
+    <h2>Zimbabwe Drought Monitor</h2>
+    <div class="map-container">
+        
+        <div class="embedded-app">
+            <iframe src="https://alphakhiine.users.earthengine.app/view/drought" frameborder="0" style="width:100%; height:600px;"></iframe>
+        </div>
+    </div>
+    <div class="map-legend">
+        <h3>Drought Intensity Classification</h3>
+        <div class="map-legend">
+            <ul>
+                <li><span class="legend-d0" style="background-color: #a50026;"></span> <strong>Extreme Drought</strong> - The most intense drought level with widespread crop failures, severe water shortages, and emergency conditions requiring immediate intervention.</li>
+                <li><span class="legend-d1" style="background-color: #f46d43;"></span> <strong>Severe Drought</strong> - Significant crop/pasture losses, frequent water shortages, and mandatory water use restrictions typically implemented.</li>
+                <li><span class="legend-d2" style="background-color: #ffffbf;"></span> <strong>Moderate Drought</strong> - Some damage to crops and pastures, low stream/river flows, and voluntary water conservation measures recommended.</li>
+                <li><span class="legend-d3" style="background-color: #30eb5b;"></span> <strong>Light Drought</strong> - Emerging dry conditions with potential stress on vegetation; early stages that may develop into more severe drought if conditions persist.</li>
+                <li><span class="legend-d4" style="background-color: #387242;"></span> <strong>No Drought</strong> - Normal conditions with adequate water supply and healthy vegetation growth; baseline for comparison.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+        <!-- Quick Stats -->
+        <section class="quick-stats">
+            <div class="stat-card">
+                <h3>Rainfall Deficit</h3>
+                <div class="stat-value">-45%</div>
+                <p>Below normal for this season</p>
+            </div>
+            <div class="stat-card">
+                <h3>Dam Levels</h3>
+                <div class="stat-value">32%</div>
+                <p>National average capacity</p>
+            </div>
+            <div class="stat-card">
+                <h3>Crop Condition</h3>
+                <div class="stat-value">Poor</div>
+                <p>65% of crops stressed</p>
+            </div>
+        </section>
+
+        <!-- Content Columns -->
+        <div class="content-columns">
+            <section class="news-section">
+                <h2><i class="fas fa-newspaper"></i> Latest News</h2>
+                <article>
+                    <h3>Government Announces Drought Relief Program</h3>
+                    <p class="date">March 15, 2023</p>
+                    <p>The Ministry of Lands, Agriculture, Fisheries, Water and Rural Development has launched a new drought relief initiative targeting affected farmers...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </article>
+                <article>
+                    <h3>UN Agencies Provide Support to Drought-Stricken Areas</h3>
+                    <p class="date">March 10, 2023</p>
+                    <p>WFP and FAO are collaborating with local authorities to provide food assistance and agricultural support to communities facing food insecurity...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </article>
+                <a href="#" class="view-all">View all news</a>
+            </section>
+
+            <section class="resources-section">
+                <h2><i class="fas fa-book"></i> Quick Resources</h2>
+                <ul class="resource-list">
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Weekly Drought Report (PDF)</a></li>
+                    <li><a href="#"><i class="fas fa-tint"></i> Water Conservation Guide</a></li>
+                    <li><a href="#"><i class="fas fa-seedling"></i> Drought-Resistant Crops</a></li>
+                    <li><a href="#"><i class="fas fa-phone-alt"></i> Emergency Contacts</a></li>
+                </ul>
+                
+                <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+                <div class="event">
+                    <h3>Drought Preparedness Workshop</h3>
+                    <p><i class="far fa-calendar"></i> April 5, 2023 | Harare</p>
+                </div>
+                <div class="event">
+                    <h3>Water Harvesting Training</h3>
+                    <p><i class="far fa-calendar"></i> April 12, 2023 | Bulawayo</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-partners">
+                <h3>Our Partners</h3>
+                <div class="partner-logos">
+                    <div class="partner-item">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhMSExAVFRUXGRkXGRgYGBgeGxgYGRoYGyAgGRoaHSggGBsmGx4eITEiJysrLi4uGx8zODMsNygvLisBCgoKDg0OGxAQGyslICUwLTIuMC8tLS0tLS8tLS0vLS01MS0vLy0vLS8tLTUtLSstLi0vLS0tLS0tLS0uLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcCAQj/xABEEAACAQMCAwYEAwUFBgYDAAABAgMABBESIQUxQQYTIlFhcQcygZEUQqEjUmJysYKSwdHwFTNDU7LxY4Oio8LhJERz/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAIEAQMFBv/EADIRAAICAQMCAwYFBAMAAAAAAAABAgMRBCExEkEFIlETYXGR0fAUI4GhwRUyQ/FCkuH/2gAMAwEAAhEDEQA/AO40pSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUqPv8AjEURIZssBkqoJI98bL9cVi4Xx6GfAQkFhlc4wwHPSVJBx71q9tX1dHUs+mdzPS8Zwbv4xO97nV49GvH8OdOfvWxXJ7LtHq433ufAxNsP5eQ+7gH611cUqtU847Mt6zSS07in3Sf1R9pSlbSmKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKxT3CJgu6rnYaiBk/WhlLPBlpWBbyM8pEP9of51kEynkw+4rGUOl+hXO1HBlw10pw0YMjLviTSvUg5zgY3yPMGq7xu4NvAZYlAMXygbABwYzjHLCuT9KvHHiPwtx/8Ayf8A6TVEuozdq0YJWA7FhjVJg76M5CpkY1bk9MDxHzHjcVVqKrlt3f6NfvydDRSWGpLPGxzaJyhVl2KkEe4OR+tfonhV2JoY5RydVb7jNcM492fktstu8XR8br6SAcv5ht7V0v4VX/eWfdk7xOV/snxD+pH0rpeHXxn/AGvKZ2PGlC/Txuh2e/6/+lzpSma6x5YUpSgFKUoBSlKAUpSgFKUoBSlKAUr4zAbk4FfaAVqyX6LMkJOGdWdfIhSAQPXcHHlW1UR2k4Et2iqXaORG1xSofFG+MZHmMbEdaAl6VRbPtBe2txHbX4jeN9kuEyM7geMchuRnljOdxV6rCeTLWBSlKyYFa97ZxyoY5EDo2xUjIrYpTkym08o492v+H72+ZbYGSLmV5vGP6uv6+/OqYrkcifvX6Uqi9r+wCT6pbfEcvMryRz/8W9fvXPv0n/KHyPS+H+N5xXqP+31+vz9TlloplkSFnbTIyow1HdWIB6+VdKurpYnjDEJFpYZx4QRoCgn8oxqx0yAPIHn9jwucXKxaCkiMHbUMaAjA6j/D5eeav9t+1lE42RVZI/Nw5Qs38vgUL5jJ5EV5bxR+eKlwk9vj9/sb/EpJ2Lpa4Rughh0ZSPQgg/oRVV4pwWe31SWMkiKd3iRiCMdU38Q3Ph6dPKtri8IZG/BKe+z88PhUEc9ZyEc9NJyfTasnBv8AaGn9t3RIxgNszepaPKr/AHTVPTynp/zITS9z2b/T+dijXfKEtl/KfxKknai96Xk398/41kHay/H/AO5L9x/lUj2g4cs0rCOCRbnTrZUUyJIN9yYwSjHGzMBnr5i59kuwMUIWWf8Aay4BAI8CH0U8z6n7V6jSSs1EVKOV9/v+h0Z6/Rwr6pwXV6YX04Insrb8XusO93LFDz1EJqcfwqR+p/WulW8elQuotgYy3M+9ZKV2a6+hctnmdVqnfLPSor0SS/2KUpWwqilK+E0B9pVW432mVnWztHEtxIdJKHIgX8zuwyFIXOB1OKtNAKUpQClKUBhu7cSIyNyYEH61Bx8XltxouY2ZV2EyDIYDkWHQ1YqVhozkqcvxH4YpwbrfyCSH9QuKnuE8XguU7yCVZFzjI6HyIO6n0NbEtsjfMit7gH+tVe54atjIZ7e2XS2zCMYOOelgNivUEjIORyNM45Bu9tOAG7hVUYCRDqXPI5GCpxyyOvQgVC8N7ZSW3d2/EYHjkwFEmxWTG2QQcE9djn0rfPbUDnayD+0tVfth26s7u2NvHKBIZIsqcHIEi5AYbZ/yNQbXKJJPhnTrS6SRQ6MGU8iP9edZq5Z8Pe0DrcJabCJmmO25Z2Z2BJ/KMKQAPP126nUoy6kYksMV5dsAkkADqelfSa55xzj7XPhXKw8wvV/Iv6fw/ffYTjHJBvBs9oPiEI37u3jEhGCWfIVh1KY5jAO/+G9Wns/xiK7t47iI5Rxn1BGxU+RByPpXGOLG4u2e0s42lZQTMw5KB+TVyDHHLmeQ643vhLfTWgnebKWzKWCuCG71OoBwUyAV35kLUJuMHuyUIynskTPa3j0DcQkgkbARUVwPzABnCkc9JLEnoQoB2JFZeIRTvEWbwLlf2aZY6SwDFz+bC5OhRjbB1DaqrwbF292kqgvMrSqeqyAndSNwfEOWNlqNjMkqgiOaXUM8pmBOHyQ2JCmOgyoPgODzHkNXUrtRKaeGmud/p6Y/Q691MtNL2Uty8cN4VF3b4t0YKSImVAhdQqkY0AAeIsuQADjNY+GR51H8RIQEDMys4EbdVKyFl5b4IyMb8xVLXh7lstbzNqzu0JGvf/iD8INGMZGCNvffHesBGQDKrNpXxoFLhmXIIwhTABGyjOT82c1p/BuTa6+fd9/x9IQl1SSSOx/Dm5WWzWUZLuzd4SBqJB21YAGyaRW9xbjDwTKCgMRXP8WQfFgk42Gnb+Ln0ql/CDiOHntyfmAlX3GFb9NP2qe7XcQWRo4o17xgxCgfnfBGnP7o5t029DXsNM06o47bfIr+I6f2GolDt2+DLLw3ikU4JjbOMZBBDAHkSp3AI5Vu1F9n+Di3jwTqkc6pH/eb08lHID/EmpSt5SFKVhurlI1LyOqKMZZiABkgDJPLcigM1ULt/fmaWHh0chHeMol0nfD8h9Fy5HotavEe0F1dXYsoJVtwzSoGOSSIuZGOZIyQMgYHWrP2e7JW9qxkGqSY/NLIcsc4zgclz6CoZ6tkSxjk3OBcAt7SPu4Igg6n8zerNzNSla3ELoRoX0liOSrjLHoBnbPvy51TrW645cEyItpBHnwhizkj3X5vfapcES9VpxXwaZolGdK5Y/uknYe+Mn0qIh4dxBxie7jXz7lCM/Vtx96mOGcOSBNCD1JO5J8yaZZk26UpWTApSlAKxXMbMrBXKEggMADpPng7GstKA5DxPifELSdg107Mp+R9RVx00+WfY/Sq0LAXNxJNJEF7zL5VFUFyNhvkISeZ33yTXY+3L93ZXEyqO8SNtDYBK5wMg9PP6Vwrgk0yo3dOp8RBR+Q5YKkctqq3ZjwWasSLL3Q4fcRPEDJJ+UswCqzDQQyhcnGojOcHmK6t2d4+lyGXK96mzqrBlyCVOlhzGoEYOCCNxXHY+JXSYbMbY5oA4B9MhgftirH2I7a2iSN3tuIXfAaQPIw/tBySq56g++MVmmaMWwZ1mud8U7KXMty8MeYYCdTT5GQrblIlznvM5GojAGDv06FG4YAggg7gjkQfKvEtwi/M6r7kD+tWk8FZo0+B8FgtIVhgjCIN/Vj1ZzzZj1Jqqdt4oUmQEjM4bK+enAz9QcfSroL6L/mp/eX/ADrl/aIm5mZnRGYnu13yUAb5QByB3yynO+eQGOf4hYoVpNNtvbBa0uFPL4SIDgZghuO9N7CioWUA6nZgRv4EBOBkb8sjFWq0vI0hTTOzIBhWWJQpXoctIcDpuPfFUi77HSrJgvGqjB3JJCnlgDOSOXMHY5Aq+cJ7FJFCii/jJ1a84wozg+Eawd8b58zy6863SO2OYVpy2zn/AGl39Cxbq7LLOq1427e4i7vthbxSNG73IIIGe6hIOQDnwyA4/rWz2jQXFowS5ib5JAHV42IBDALqJDE4xzGKx8b+HEbkzLfxoQCWBXK4A/L48gdeR9BWja2rxIkRkLKNQ1qOm5U4+dcHHpgb88VC3ReyjGxULK3eOV8m/wCTXTqJKzPVxx8z3w7hcduoYviQKS7qxGFYYKjB3B5AHnufSr52S4J3Y7+RQJGUBE/5UfRR5Mev0HTfgFxbS5PhbXuSwDAlgQeeORruXw24/JPat+Jca430BmwpZdKkZG2SMkZ9POu3RYn5cYK1tsrZOU22/v7wXOlY451bZWB9iDWSrBrFVD4nykWTqu+WXUBudOSeXlqA/WrRfu4jcxrqcKSoPVsbfrXH+N2M7aJ7gmCYsQza2yy4GkDOnSchtlAUDHPnULHiLJ1rMisW/G5oHjkt1TvEMhBc5A1rp2HU7nrttV04RxW5lthc3fEVhJJAVJHzgfvKp8B9M8sVqcWvIpIyusKukBjrOMKdQwrMw1Z5v8xqK7JcL/Gu4gZS0eMLIMeE7F16A6ufXcVXhPOyN04Y3Zfez1tHdMD/ALQeYKMlCZN1O22pjsc4JHQ4q+KoAAAwBsAOlRnZ7gy20QQbsd3b95v8vIVKVZisIrt7ilKVIwKUpQClKUApSlAavE7JZopIXzpkVkOOeGGNvWvztxjgs9hdpDIRqJXxKdnjZiAcdM4O3TFfpOuX/GrgbusN2ik93lJCBuq/MrH0DZ/vVrtjlG2qWHgqdaV1bpJurAP0II39/OvnCbvvVIcoGG27KNe3MAnNZDYLyyw+ornpdL3LjfUWDsN27NoskFwHaNQSgUZKt+6v8LH7H0O137JXk101w1yqjUqgRAZEaHWNJP5mPU1xbiMJRwx3B2J8/f6f0rrnCLpjwuSSDJlFq/uZV7wE+pyNvpV2puTST2KlqUU9jnfw8nMPF1iiJKNJLERzBjGsg/TSDn3rJ8VMW/FGlhbS+mOU46SfTzCgkdcnzrJ8F1Q8Qy3MQuV98pn66c1GcdYvxl/xHW7RWz+4HRR9O7xXX/yP4HK/x/qXD40wqYLKcqFkYlT08JTUQfZv619jf8T2bd592i1BHPPMcmE367eD71G/HGeT8XBGf92IdS+RZnYN9QFX/Rra7WgpwCwWL/dsYzJjzIZ9/wDzN/etcV5I/E2N+aXwPnwjbvra/tZd4dAbf8pcODg9PlB996jvg1xCQXxhyWSSNiwO4ym4b06j6itjslIU4FxJ4v8AeF2VyOYQpGD/AOksfvWX4Fxqbm5J+YRoF9ix1Y+y1mXE2YjzBET8RZDa8WeSBiGBjmwDsHIBIx5HGSP4j51Y/jfbJ3dnNjDksh9V0hv0P/VVOuWMnGf/AMjreqr5/dEqqB7aQB7VO/G+4kN5FGfkWEMnkSzMG+vhX/RrKXmh8DGfLL4lo7JdpTHw61uJo3kI7yJii5bSsgXWfMBRv542q/Wd7HLGsscitGw1BgdiPeqz2Z4fG9jZxD5TbZyP3j3bZ99RzXOO1NxLZvPbRyMiyD9rGPlLE7Ff3dQ3bHMfWudbY42cbMv1QzBb7kz21+IEkjGC0YhOWtdmk/lP5E9eZ9Kp1rw0ZLy4Zz574/zrHZSBFBxl23JOdh06E8q3rWctnK4x133+9U7JyZbrhFGpfwW8X7RolznYAcz7cqsnwVtna+nmPJYXDfzSyRsB9kaql2icMY0Xdgc48s4x9zXf+y3AIrOBYok0k4ZznJZ8AEk9fLyA5Vs08W92QvljYmKUpVsqilKUApSlAKUpQClKUArBeXEaKWkZVXZcsQASxwBvzydsVnrivbPjsl1xWKAE91DPHGq9C4cBmPrnIHoPWsN4JRjk2/iR2Mhtil5CEVGkCtEzFVDNnBRh8m/Q7fSoG7YrnC7+p2+46etXX4xX/gt7YbGRixOgMuwwFYHlqy2/TTVKfkx3wATsOQAzmqWox1ItUNtbmn+MRyqd2zsxACYUsW8gpPiPtmrH2cluxMkUayxlXGqM7ALqy2tRsF55zWr8O+Byu/ewgaz/AMZ12iByMqD+cj6jPTnUp28uZeHutvayFFlhPeMVVndizAtrIyDg1joUV1ZeEar9Sq4OUiq9lZQvGozB8huZFUD/AJTM4+2jf6VufGYRjiBKbP3SGQj97fB99IX6YqC7PX0lnL30RUuAVBdA2nPMjcYONs+VY7u5kluWupWDyM4chl8JIxgEA/LgAY8hXQ/qVHX1b8ehwvxNfRjPc6F8Wir8PsJZBiclPfDRFnB9NQX64rFwKVW7N3Im3VDIEz56gy49RIcCqb2m43cXzI08g8AIUIoCjJ3OCTvy+1fb3jk8lpHZakSBCCFRMEkZOWOTnxHV71BeIUdKWXz6Enq6upvPYsvwYky19FIMwtCC+eX5hv7qT9qiPhRcMvFIVjzocSqf5AjMCfqq/wCjUdw/i88NtNaxsqpNkSNoGtgRjGrOwxty6nzp2b4rNZO0kDLrYadToGIHPC+Wds+wqT8SofVzv7jC1Vfl34JP4u6F4lI0ezaI2fHSTHP30has3xk0tZ2MjjE5P10mPLj2Daa57NcSPcG6d9chfvDqVSpYcsr5DA29BWx2i4tcXro9xNkoulQqqAATk7Y5nb7Csf1GjMedvcPxVeJb8nRfhxx5ILCAzsQoM6IcE5AdD06Akj6VT+1jPd3kkuxjLbfyDZdjvnSP1NSvY+2l4grW5kVVtox3QCADLNuGI3OcZz55Na3FOz8scb6Hf8RGSXgYjxR7+OInOv2586rW2ytfVHh8HY0kq5VKSNREAGAMVh4heGJA3clxyLEkKvufP0961OFzd7lid12+h9gPr5+wqc4Gkb8QsVkVCNbfO2dR0sFCpy2bByfIVXhDz4ZdlLy5Ru/DvsDJJIl3cgrGCHVW+eRhuCwPypnB8z7bnstVjtb2sWwltRImYpu8DsOaaO7wQOo8RyP+xskUgYBlIIIBBHIg9RXQjFLZFKTb3Z7pSlSIClKUApSlAKUpQClKUArk/DOzerj85PyQsLn3Mm6j6Pk/2RXWKrcyJb301y52mhReX5oi23uQ36VGRKLOf9vHkbikjHPdrEka7+FjuT9QSfUbVh7Mxa7uKJgCkvgYegDNke4yD7jy3h47xpLm/MmdRnLY/dOSP+kAfQeVfJJ2WWIoxVlbWCOhHL9elUZv83cuQj+XhHeuG2UcMaxRqFRRgD/PzPrXNfjVbHVaS9MSoffwMP6NV67IcWe6tIp3UKzasheXhYrkZ88Z+tQ/xV4f3tg7gbwssv8AZGVb/wBLE/Srd0eqtpHL1MOqqSOI0oaVwzzYrxYq893DZxfM5y7AZ0IBknBIHIE717qY+DUIkvb2fG6IEB8tbf5JVvSVKc9+xd0FKss83CJTtX2OW1g7+KWR9LKHD6NkY6cjQgIIYrz2xmqma7Vx2y762nh/fjdR6EqcH6Ng1w+3uVcDDDONx1HnkehrZrKVHDijd4hQoNSgtjNSlKoHMOqfBa08F1MfzMkY/sKWP/WPtV24/wACiuk0uMMPlcfMp/xHpWh8POGmCwgUjDMDK3vIdWD7KQPpUpxvjEVrGZJWAHJR1dsEhVHUnFdyuCVaiz02ni4QilyccveCvb3F1HI6eFRLsBuuDvnnvg7HrUbeytGFnVtBiIfIUFiAQwVfIlgudxtnfofvGb55Zu+c+KSQaxnYjoPUDC4/lFZ5IA4KE4DAgnyGNz9BvVNtKaaOmovpwy2fGAd9aWd0vy55+QlQEfqoFWL4Uzs3DYdX5S6L/KrED7cvpUZwhorzgDKFOlIpFUMcsGhLaCSOvhVvrVk7B2/d8Os1xg9zGx/mZQx/Umr65yU29sE9SlKkQFKUoBSlKAUpSgFKUoBXh0B5gHG+4617rxKDpOOeDj3oDg/aRe64lf7bGQH7qD/U1FqSGEjqQrhtDEbNpI1YPXG33q19i+A/7QuJnunZghDSDOC7sWAyRyA0n9BV27Tdku8/DNbiNVt1dO5K+GRHC5XPJTtzIO/OqnsurMi17XpxEkew0Gjh9opGCYlY+7jV/jUxdQLIjRuMq4KsPMMCCPtVN7CcdUarN9SGNykYfZlHMRNucED5TyZcY5GprtT2miso9T+J2zoQc2Pr5L5mrKksZK/S28HCeL8Oa3nlgfnGxXP7yj5W/tLg/WtOp/tHcJcj8UD+1G06nngnZh5qGOn0BHlVedwoLHkASfYb1x76+me3D4PO6vTum1xx8CS4FwWW7d0RH7tAA8i6Ni35V1sAWxv6ZG29SPwvsvwPELqymQCVlDxtgElFySNYOORBIA5g77VceBWElrZRlDrIjaV4wAC8j+I6Hb5SPlGoEYAzjprce4XLdC0vbKRRcQE4MuwdGGHR9I55zy23aurTUq44XPc7WnojVDC57lvU1xviHZ9EtJpwGD21/Kh8bkd1I4T5CdK/Mm4A5Cuiydq4YgfxavasDj9oCUc4B/ZSKCJOfLY89tqgI7K6uDfwJb6La7fvFuJT8qtGgysQOtmLLkbgdfQ7ZLqTRunFSi16lFqW7K8I/F3UUGMqxzJ6Rru2ff5fdhUSyMsksT41xOY3xnBI6jO+CN6uvYm2e3IucYdgCgPWIjO/8+c+2g1xIx6J+fhcnE0ejlZf0Ptz9+87SKpHxbhzawt+5Oh/vJIv9WFXGzuVkRZFOVYZH/36g7VV/iPIrwLagjvJWD5PKNI2DF29OSj1b0NdibXSzuw2kjkk0DSYRBlgDKR5JGCzH7VsifKEjyP9K6D8LuEx91czNGWMkjRhnXBaEAAAA8lO5251Se0vZqazkdSjGAnwSAHGCdgx6N03qpOlqCaLcbk5tMs3wr4XM3DVKOAkzSageYCuVyvvg102KMKoUDAAAA9BVS+Fd1GbCKFWBeHKuvUFndgfY8/v5VcKuRxjKKkuRSlKkRFKUoBSlKAUpSgFKUoBSlYbu6SNS8jhVHMk4H/f0oCg/D1O74hxKPpqyB6CSTH6MK6BLKqgszBQOZJwB7k1ykcTkgvbu5QFFm1EFlyTEuCWVMg6s42bo2cHGK2YeIRzyMrO8rr4gZN9vNBjSo9gKo262FUdln4cfM3qpye58+IssBZby2bvJFwkwUNoliztmQDSGVsYIOd/QVQuNcSkupS8js2wGSRkKOS5AAz1JA/rU3274ocrAm+ME/zHkD6Ab/UVVJ1ZUwmSfPrv196112ytj1NYyWq61BZLF2RtS0+rbEak7qGG4KgEHY7En6VH8X4UIZYskvbs6MHGDqjVlLrtsW05HqPrUbZ8clhQxSxApKVbJXD6R1QsMH08PU7isq3+zKHDQlhnJOCAef8A4b45E8j1I2MHCzrznZcFPVwhfj1XH36HarC+iuIxLEweNs4OD7EEEZBB2INR3aON1hBt+7SVDqjDP3cZO+QwDKGBzyORnf1rnMHEbmzybefMb7KxXKFvJk/LIBzAxkbjI5W/gXbm3m0Q3A7qZzoAbxI5wNw+kKM8sHBz9M36tRGzbhlaFycuiW0vT6epMXdil7bGC4jkUHTrDKq5YDJ0/NjfqD7GoMiXhWWy8nDlVVOpi0sJJ0jQM7xZIGMavF5CpTtB2vtLMBGbXLjwwxYLY6Z6Ivqa5vc3d1eSM80pKqS+k/7q3Q8thzbGw6seWNzWbro1rfkzZao7LeT4X32FgEnupru4jZIWZXlRW1EAAAJqcqWZ8b9QCduVXvg/EfxMErsv7V5jIo5LFHhUVd8ashcADngGqhw6074ctEEWSqsca2A8TSEc9t2I5AYHkbbbPp0Bc4UH5xgajkMT4s5UFfAPlDaObErz1OUst9zZRV0Pq7vn79CZ4dxv8KrjIkBBYclVWGASTk4j55PmuwOa1OyHDDfzNfTktCGxGDkd865Gsr/y15Km45k5OSdKaDUCzINEnh0kchyGem4/wqc7P8feGNYTCjRxgIoj8LBBsvhY6X25nK752qVGqr4k9lwWrKpY6l35LyBWjx2NWtpw6hl7t8g+Wk04bxeGbIR/EOaHwuvup3A9eVYO1kumyuj/AODJj30kD9a6Saayirgq/wAH7fFtNJjd5AM+iov+JNX6qn8Lo8cOiP7zSH/3GX+gq2ViCxFGZPLbFKUqREUpSgFKUoBSlKAUpSgPhrlr9oVlndblikyOyBH2RMHH7M/LkjqfEc+W1dTql9sewa3kgmjkETkYfK5DgcjgEeLp6jHlVfU0+2h05aNlclF5Kl2lmEiPEO9GkjVJHk6ARk5A3I5ZXbIORWzw7h8yWwiaYGQDSsmkgqhxgc86h0Oeg51H2tzJZTvZ3TDSPlc50gEbZJ/4ZH2Ix7StjFLqVnnDo2kMoxgHUo8LDppJ325A7Vwra514qfGdvf8AfoW00/MaE3ZqN3dnkZi2+RjIYncnAxjyB5Z9BUDc9mptYRQJFJ+cfLjrq56K6XdtKkpjjDqrfhwmlD3aqsjGY5A0qe72Od/lxUTacVaU6JYgZModhocC4ZWiGeumLvNXPPdHaulHS2QXlnl+9bGtajtjYo/EOxtw+nJB04UHWCFUejYAA9KqdmNLujMBzG/IlTjAOeZ9/vXaIpC2QqtszqMrzaNirYK5EgBByVOf4RVD45wOed2doiwJPiULuPLmSR6HcVrqtsg3C7C9CMoxazE1+HSRrHLGz4LgKVIwCq75XyYFgMDHmOoEfeWelcnxxnzGTtz2/NjzG/8AWt+x4ebdFMp0AjSpfOoDUN9OAQoA+uKtXFOPRWTRRv3jtjKMujwxNjVlM4DHmOp236VONSsk2nsab6YWQSmt+3qikcH7PMwZoo9CY1FjzYZwdCtu3+tjWe/m0RiFCdJOphk+I9NXmc/0qbftqoZY0tXMZVVGoZfGTlowCeY3x5ioztFdRm7Miu0iZQ+LZtsEqcjYjluKxfUkk8muuqNUXjl93yXRbFI1jt4xl1VS7dFC4cjPIMx8Wd9PgY5woMfPfQINMsgA21hSSWIz4VC4IUZ2JwepJJqvPxO6uSyQqVVjuqZJP87ncknJ6ZJ9ql+GdicEG4cliSO6iBZ8hQx1AYIwpB5j5l8wDBqVi6YG9TxwiKgudd0gtRLoJUFGYkYz4s5JwuN9ztVyBZWA/MNuXzKevl6+4Irb4XHaB1ghMgDAFWURBGzGJM4+c+E/MRjO2c1qSlZ445VkYQcy+NOSyNlScnkMhiMjORzG2i3TWxWWtvmbqppZWeTHDwRQ0chkcso3IYjIGcacHKgE5GDy2rxedqzLIbAyvJpIOoJliVOWUsux0jcEgeLAJJFe7K3HdGOK4Jw/MnJUK3IeR2PPY56g1Gpe29iHjUd5JqJOAoO+CBI+Bv16nflWvT3WRbSy36fyycopnUuy0FvHbrHbOXjUtjUcsCzFiGyAQcnkRkVL1Q/hms0pmvJQFVwscYAwCFJJJ6vvgAnybGM1fK9BW5OKclhlKSwxSlKmRFKUoBSlKAUpSgFKUoBSlKAge1HZWC9Ud5lXX5ZFxqHoc/MPQ/pXP734YXUYZ4Z4nZfEmxU6huNsEZzjrXXqVFxTJRk0fnKw4neLNKgWWWd1ZCrazIrHqMHKsD16VbOHXfFISrS2ks6qcjXG2sbEZWQDVnBI3zzNdg0jnivta4U9K5Lms1kdRJSUFHbt3Oe8MNvciGIa0ECnVBJrWQkgKC5yO8TBbPMMSCeWK9z3OLcT3Vt3EpfRoWVDzYqpL/IRoGs55AGr1Pbq4wyg45Z6ex6Go6bhJ1KykMVyV181yMHDAeRI3B5nepSrUlhrJTUscHOOL8P75iyXCKUGGSYGMghtJxJvG+GbSdJxmoS97GXDhsW+otuHR42/o/Iir1edmGQho1YbqzA6gWZWmct3sQbQWd0Y+HB7sbb7aVzwjeYssb65I3ALQYZEeElTqRXzpQ7E6T5Cq/4WEf7co2e1l3KjY8A4sW1ta6JAghR2eIaEA/KA/wAx88Z5451PcG7DRDSJ3jaVgX2ctkAgEqAQCASAWOdzUkvC2OvAhOoYiHeKTaYkdgU23wGU4XqgX5cEb/BOzTROjpqOnWoBGFWNi5wpYAjLFHOx3UgbVl6atvOCDk+544VFC8Ugs/CYpGiOtCoZk2Zd12Ug41oNjg74wa7b8UitgO+uGEqrHpWPTJIjKhjdZHOY3BUJzOfCOozXThwpWBEwEgIwVPyYPTB+b6/YV9XgdqF0i1h0+Xdpj+lb1DCwtjGfU5xwTjVtJ3hEPdLEI27yWUA7a1zlV2zk5331cqirztRadyYYon2kGIy50MqKylkcDIBwCQQM5J5k5v3GPh3Yzg4jMLecRwM/yHK/pWrwb4YWUOTIHnbzckADyCoR+ua1zhOXl7dy3W9MqpOTfX2XY59a8andylrbIryY2jUs22wIHL6kVeuxXYNI0728jDzMSdDkMEBOfFuQzk7k78/fN1sOHQwrphiSMeSqB98c62qzVp4V8IrSscjyiAAAAADYAcgPSvVKVvNYpSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUAry0YPMA+4r1SgPKxgcgB7CvVKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAf/Z" alt="Government of Zimbabwe" class="partner-img">
+                        <span class="partner-text">Government of Zimbabwe</span>
+                    </div>
+                    <div class="partner-item">
+                        <img src="https://www.undp.org/sites/g/files/zskgke326/files/2025-04/undp-logo-blue.4f32e17f.svg" alt="UNDP" class="partner-img">
+                        <span class="partner-text">UNDP</span>
+                    </div>
+                    <div class="partner-item">
+                        <img src="https://alnap.cdn.ngo/media/images/fao_card.jpeg.max-320x130.png" alt="FAO" class="partner-img">
+                        <span class="partner-text">FAO</span>
+                    </div>
+                    <div class="partner-item">
+                        <img src="data:image/jpeg;base64,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" alt="University of Zimbabwe" class="partner-img">
+                        <span class="partner-text">University of Zimbabwe</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Zimbabwe Drought Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
