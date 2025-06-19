@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drought Mitigation Strategies | Zimbabwe Drought Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Tab styling */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 16px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #2c7be5;
+            color: white;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            animation: fadeEffect 1s;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c7be5;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .section-title {
+            color: #2c7be5;
+            margin-top: 30px;
+            border-bottom: 2px solid #2c7be5;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (same as your main page) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Zimbabwe Drought Management System</h1>
+            </div>
+            <div class="header-tools">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="language-selector">
+                    <select>
+                        <option value="en">English</option>
+                        <option value="sn">Shona</option>
+                        <option value="nd">Ndebele</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation (same as your main page) -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planning.html">Planning & Preparedness</a></li>
+                <li class="active"><a href="mitigation.html">Mitigation & Response</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                 <!--            <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>         -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1>Drought Mitigation & Response Strategies</h1>
+        <p>Explore comprehensive strategies to mitigate drought impacts and build resilience in Zimbabwe.</p>
+        
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'strategies')">Mitigation Strategies</button>
+            <button class="tablinks" onclick="openTab(event, 'earlywarning')">Early Warning</button>
+            <button class="tablinks" onclick="openTab(event, 'government')">Government Programs</button>
+            <button class="tablinks" onclick="openTab(event, 'technology')">Technology</button>
+            <button class="tablinks" onclick="openTab(event, 'community')">Community</button>
+            <button class="tablinks" onclick="openTab(event, 'emergency')">Emergency</button>
+        </div>
+
+        <!-- Tab content -->
+        <!-- Mitigation Strategies Tab -->
+        <div id="strategies" class="tabcontent" style="display: block;">
+            <h2 class="section-title">Drought Mitigation Strategies</h2>
+            
+            <h3>Water Conservation Techniques</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Description</th>
+                        <th>Implementation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rainwater Harvesting</td>
+                        <td>Collecting and storing rainwater for later use</td>
+                        <td>Install roof catchment systems and storage tanks</td>
+                    </tr>
+                    <tr>
+                        <td>Drip Irrigation</td>
+                        <td>Efficient water delivery directly to plant roots</td>
+                        <td>Small-scale systems for gardens and farms</td>
+                    </tr>
+                    <tr>
+                        <td>Greywater Recycling</td>
+                        <td>Reusing household water for irrigation</td>
+                        <td>Simple filtration systems for homes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Agricultural Adaptation</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Description</th>
+                        <th>Benefit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Drought-resistant crops</td>
+                        <td>Varieties that require less water</td>
+                        <td>Sorghum, millet, cowpeas</td>
+                    </tr>
+                    <tr>
+                        <td>Conservation Agriculture</td>
+                        <td>Minimum tillage, mulching</td>
+                        <td>Reduces soil moisture loss</td>
+                    </tr>
+                    <tr>
+                        <td>Crop Rotation</td>
+                        <td>Alternating crops to maintain soil health</td>
+                        <td>Improves water retention</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Early Warning Tab -->
+        <div id="earlywarning" class="tabcontent">
+            <h2 class="section-title">Early Warning & Preparedness</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Description</th>
+                        <th>Resources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Drought Monitoring</td>
+                        <td>Real-time tracking of drought indicators</td>
+                        <td>Satellite data, weather stations</td>
+                    </tr>
+                    <tr>
+                        <td>Community Alerts</td>
+                        <td>Early warning systems for farmers</td>
+                        <td>SMS alerts, radio broadcasts</td>
+                    </tr>
+                    <tr>
+                        <td>Preparedness Plans</td>
+                        <td>Community drought response plans</td>
+                        <td>Templates available for download</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Government Programs Tab -->
+        <div id="government" class="tabcontent">
+            <h2 class="section-title">Government & NGO Programs</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program</th>
+                        <th>Description</th>
+                        <th>Eligibility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Drought Relief Fund</td>
+                        <td>Financial support for affected farmers</td>
+                        <td>Registered smallholder farmers</td>
+                    </tr>
+                    <tr>
+                        <td>Irrigation Subsidies</td>
+                        <td>Support for water-saving technologies</td>
+                        <td>Farmers in drought-prone areas</td>
+                    </tr>
+                    <tr>
+                        <td>Livestock Feed Program</td>
+                        <td>Emergency feed distribution</td>
+                        <td>Communities in declared drought areas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Technology Tab -->
+        <div id="technology" class="tabcontent">
+            <h2 class="section-title">Technology & Innovation</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Application</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Soil Moisture Sensors</td>
+                        <td>Precision irrigation scheduling</td>
+                        <td>Pilot programs in Mashonaland</td>
+                    </tr>
+                    <tr>
+                        <td>Drought Prediction Models</td>
+                        <td>3-month drought forecasts</td>
+                        <td>Available through Met Department</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Apps</td>
+                        <td>Farm management tools</td>
+                        <td>Free download (Android/iOS)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Community Tab -->
+        <div id="community" class="tabcontent">
+            <h2 class="section-title">Community Engagement</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Initiative</th>
+                        <th>Description</th>
+                        <th>Schedule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Farmer Field Schools</td>
+                        <td>Hands-on training in drought resilience</td>
+                        <td>Monthly in all provinces</td>
+                    </tr>
+                    <tr>
+                        <td>Water Conservation Workshops</td>
+                        <td>Community water management training</td>
+                        <td>Quarterly in drought hotspots</td>
+                    </tr>
+                    <tr>
+                        <td>Women's Resilience Groups</td>
+                        <td>Gender-focused adaptation strategies</td>
+                        <td>Bi-monthly meetings</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Emergency Tab -->
+        <div id="emergency" class="tabcontent">
+            <h2 class="section-title">Emergency Response</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Measure</th>
+                        <th>Description</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Emergency Water Supply</td>
+                        <td>Water trucking to critical areas</td>
+                        <td>District Development Coordinator</td>
+                    </tr>
+                    <tr>
+                        <td>Food Aid Distribution</td>
+                        <td>Emergency food supplies</td>
+                        <td>Local Social Welfare Office</td>
+                    </tr>
+                    <tr>
+                        <td>Veterinary Services</td>
+                        <td>Emergency livestock support</td>
+                        <td>Department of Veterinary Services</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer (same as your main page) -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Zimbabwe Drought Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
