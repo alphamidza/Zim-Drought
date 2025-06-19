@@ -4,111 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources - Zimbabwe Drought Management System</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Main Styles - Can be moved to your CSS file */
-        :root {
-            --primary-color: #2c5e91;
-            --secondary-color: #4caf50;
-            --accent-color: #f5a623;
-            --light-bg: #f5f7fa;
-            --dark-text: #333;
-            --light-text: #666;
+        /* Tab styling - matches your mitigation page */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: 0;
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-text);
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        h1, h2, h3 {
-            color: var(--primary-color);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-header h2:after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent-color);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .section-header p {
-            color: var(--light-text);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Resource Categories */
-        .resource-categories {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .category-btn {
-            padding: 10px 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 30px;
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+            padding: 12px 20px;
+            transition: 0.3s;
+            font-size: 16px;
             font-weight: 500;
         }
-        
-        .category-btn:hover, .category-btn.active {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
+        .tab button:hover {
+            background-color: #ddd;
         }
-        
-        /* Resource Grid */
+        .tab button.active {
+            background-color: #2c7be5;
+            color: white;
+            border-color: #2c7be5;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            background-color: white;
+            animation: fadeEffect 1s;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        /* Resource Grid Styling */
         .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
-            margin-bottom: 50px;
+            margin: 20px 0;
         }
-        
-         .resource-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-            max-width: 1200px;          /* Optional: set a max width */
-            margin-left: 415px;          /* Center horizontally */
-            margin-right: auto; 
-            margin-bottom: 50px;
-        }
-
-
         .resource-card {
             background-color: white;
             border-radius: 8px;
@@ -116,84 +62,68 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
         .resource-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
-        
         .resource-img {
             height: 180px;
-            background-color: var(--light-bg);
+            background-color: #f5f7fa;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-color);
+            color: #2c5e91;
             font-size: 3rem;
         }
-        
         .resource-content {
             padding: 20px;
         }
-        
         .resource-type {
             display: inline-block;
             padding: 3px 10px;
-            background-color: var(--light-bg);
+            background-color: #f5f7fa;
             border-radius: 30px;
             font-size: 0.8rem;
             margin-bottom: 10px;
-            color: var(--light-text);
+            color: #666;
         }
-        
         .resource-content h3 {
             margin: 10px 0;
             font-size: 1.2rem;
+            color: #2c5e91;
         }
-        
         .resource-content p {
-            color: var(--light-text);
+            color: #666;
             font-size: 0.9rem;
             margin-bottom: 15px;
         }
-        
         .resource-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 0.8rem;
-            color: var(--light-text);
+            color: #666;
         }
-        
         .download-btn {
             display: inline-block;
             padding: 8px 15px;
-            background-color: var(--primary-color);
+            background-color: #2c7be5;
             color: white;
             text-decoration: none;
             border-radius: 4px;
             font-size: 0.9rem;
             transition: background-color 0.3s ease;
         }
-        
         .download-btn:hover {
             background-color: #1d456e;
         }
-        
-        /* Featured Resources */
-        .featured-resources {
-            background-color: var(--light-bg);
-            padding: 40px 0;
-            margin: 40px 0;
-        }
-        
+
         /* Search Bar */
         .search-container {
             max-width: 600px;
             margin: 0 auto 40px;
             position: relative;
         }
-        
         .search-container input {
             width: 100%;
             padding: 12px 20px;
@@ -202,12 +132,11 @@
             font-size: 1rem;
             padding-right: 50px;
         }
-        
         .search-container button {
             position: absolute;
             right: 5px;
             top: 5px;
-            background-color: var(--primary-color);
+            background-color: #2c7be5;
             color: white;
             border: none;
             border-radius: 50%;
@@ -215,22 +144,60 @@
             height: 40px;
             cursor: pointer;
         }
-        
-        /* Responsive */
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .resource-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: 1fr;
+            }
+            .tab button {
+                padding: 10px 15px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section (matches your main page) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Zimbabwe Drought Management System</h1>
+            </div>
+            <div class="header-tools">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="language-selector">
+                    <select>
+                        <option value="en">English</option>
+                        <option value="sn">Shona</option>
+                        <option value="nd">Ndebele</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation (matches your main page) -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planning.html">Planning & Preparedness</a></li>
+                <li><a href="mitigation.html">Mitigation & Response</a></li>
+                <li class="active"><a href="resources.html">Resources</a></li>
+    <!--            <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>         -->
+            </ul>
+        </div>
+    </nav>
+
     <!-- Main Content -->
     <main class="container">
-        <div class="section-header">
-            <h2>Drought Management Resources</h2>
-            <p>Access our comprehensive collection of materials to help understand, prepare for, and mitigate drought impacts in Zimbabwe.</p>
-        </div>
+        <h1>Drought Management Resources</h1>
+        <p>Access our comprehensive collection of materials to help understand, prepare for, and mitigate drought impacts in Zimbabwe.</p>
         
         <!-- Search Bar -->
         <div class="search-container">
@@ -238,192 +205,251 @@
             <button type="submit"><i class="fas fa-search"></i></button>
         </div>
         
-        <!-- Resource Categories -->
-        <div class="resource-categories">
-            <button class="category-btn active">All Resources</button>
-            <button class="category-btn">Farmers</button>
-            <button class="category-btn">Households</button>
-            <button class="category-btn">Policy Makers</button>
-            <button class="category-btn">Researchers</button>
-            <button class="category-btn">Emergency</button>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'all-resources')">All Resources</button>
+            <button class="tablinks" onclick="openTab(event, 'farmers')">For Farmers</button>
+            <button class="tablinks" onclick="openTab(event, 'households')">For Households</button>
+            <button class="tablinks" onclick="openTab(event, 'policy-makers')">For Policy Makers</button>
+            <button class="tablinks" onclick="openTab(event, 'emergency')">Emergency Resources</button>
         </div>
         
-        <!-- Resource Grid -->
-        <div class="resource-grid">
-            <!-- Educational Materials -->
-            <div class="resource-card">
-                <div class="resource-img">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <div class="resource-content">
-                    <span class="resource-type">Fact Sheet</span>
-                    <h3>SADRI Drought Resilience Profile for Zimbabwe</h3>
-                    <p>A comprehensive guide to drought causes, impacts, and early warning signs specific to our region.</p>
-                    <div class="resource-meta">
-                        <span>PDF • 1.18MB</span>
-                        <a href="https://www.ciwaprogram.org/wp-content/uploads/SADRI_Drought_Resilience_Profile_Zimbabwe.pdf" class="download-btn">Open</a>
+        <!-- All Resources Tab -->
+        <div id="all-resources" class="tabcontent" style="display: block;">
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-book-open"></i>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Technical Guide -->
-            <div class="resource-card">
-                <div class="resource-img">
-                    <i class="fas fa-tractor"></i>
-                </div>
-                <div class="resource-content">
-                    <span class="resource-type">Technical Guide</span>
-                    <h3>Drought-Resistant Farming Techniques</h3>
-                    <p>Practical methods for crop selection, soil management, and water conservation for farmers.</p>
-                    <div class="resource-meta">
-                        <span>PDF • 942KB</span>
-                        <a href="https://www.agric.gov.zw/wordpress/wp-content/uploads/2020/07/ZIMBABWE-drought-mitigation-strategy-27-May-2024.pdf" class="download-btn">Download</a>
+                    <div class="resource-content">
+                        <span class="resource-type">Fact Sheet</span>
+                        <h3>SADRI Drought Resilience Profile for Zimbabwe</h3>
+                        <p>A comprehensive guide to drought causes, impacts, and early warning signs specific to our region.</p>
+                        <div class="resource-meta">
+                            <span>PDF • 1.18MB</span>
+                            <a href="https://www.ciwaprogram.org/wp-content/uploads/SADRI_Drought_Resilience_Profile_Zimbabwe.pdf" class="download-btn">Open</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Government Document -->
-            <div class="resource-card">
-                <div class="resource-img">
-                    <i class="fas fa-file-contract"></i>
-                </div>
-                <div class="resource-content">
-                    <span class="resource-type">Policy Document</span>
-                    <h3>National Drought Response Framework</h3>
-                    <p>Official government policy document outlining Zimbabwe's approach to drought management.</p>
-                    <div class="resource-meta">
-                        <span>PDF • 3.8MB</span>
-                        <a href="#" class="download-btn">Download</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Interactive Tool -->
-            <div class="resource-card">
-                <div class="resource-img">
-                    <i class="fas fa-calculator"></i>
-                </div>
-                <div class="resource-content">
-                    <span class="resource-type">Interactive Tool</span>
-                    <h3>Water Usage Calculator</h3>
-                    <p>Estimate your household or farm water consumption and identify conservation opportunities.</p>
-                    <div class="resource-meta">
-                        <span>Web Tool</span>
-                        <a href="https://watercalculator.org/wfc2/q/household/" class="download-btn">Access</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Training Material -->
-            <div class="resource-card">
-                <div class="resource-img">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <div class="resource-content">
-                    <span class="resource-type">Training Material</span>
-                    <h3>Rainwater Harvesting Workshop</h3>
-                    <p>Presentation slides and manual from our popular rainwater harvesting training program.</p>
-                    <div class="resource-meta">
-                        <span>ZIP • ---</span>
-                        <a href="https://www.slideshare.net/slideshow/urban-water-quality-issues-rainwater-harvestingmaster-gardener-specialist-training-presentation/584585?from_search=0" class="download-btn">Open</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Emergency Resource -->
-            <div class="resource-card">
-                <div class="resource-img">
-                    <i class="fas fa-first-aid"></i>
-                </div>
-                <div class="resource-content">
-                    <span class="resource-type">Emergency Resource</span>
-                    <h3>Drought Emergency Contacts</h3>
-                    <p>Directory of essential services and relief agencies available during drought emergencies.</p>
-                    <div class="resource-meta">
-                        <span></span>
-                        <a href="https://zinwa.co.zw/contact/" class="download-btn">Open</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Featured Resources Section -->
-        <div class="featured-resources">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Featured Resources</h2>
-                    <p>Highlighted materials that are particularly relevant to current drought conditions.</p>
                 </div>
                 
-                <div class="resource-grid">
-                    <!-- Featured Resource 1 -->
-                    <div class="resource-card">
-                        <div class="resource-img" style="background-color: #e3f2fd;">
-                            <i class="fas fa-chart-line" style="color: #1976d2;"></i>
-                        </div>
-                        <div class="resource-content">
-                            <span class="resource-type">Report</span>
-                            <h3>2023 Drought Impact Assessment</h3>
-                            <p>Comprehensive analysis of current drought conditions and projected impacts across Zimbabwe.</p>
-                            <div class="resource-meta">
-                                <span>Updated: May 2023</span>
-                                <a href="https://alphamidza.github.io/Zim-Drought/" class="download-btn">View</a>
-                            </div>
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Technical Guide</span>
+                        <h3>Drought-Resistant Farming Techniques</h3>
+                        <p>Practical methods for crop selection, soil management, and water conservation for farmers.</p>
+                        <div class="resource-meta">
+                            <span>PDF • 942KB</span>
+                            <a href="https://www.agric.gov.zw/wordpress/wp-content/uploads/2020/07/ZIMBABWE-drought-mitigation-strategy-27-May-2024.pdf" class="download-btn">Download</a>
                         </div>
                     </div>
-                    
-                    <!-- Featured Resource 2 -->
-                    <div class="resource-card">
-                        <div class="resource-img" style="background-color: #e8f5e9;">
-                            <i class="fas fa-hand-holding-water" style="color: #388e3c;"></i>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Policy Document</span>
+                        <h3>National Drought Response Framework</h3>
+                        <p>Official government policy document outlining Zimbabwe's approach to drought management.</p>
+                        <div class="resource-meta">
+                            <span>PDF • 3.8MB</span>
+                            <a href="https://www.unccd.int/sites/default/files/country_profile_documents/1%2520FINAL_NDP_Zimbabwe.pdf" class="download-btn">Open</a>
                         </div>
-                        <div class="resource-content">
-                            <span class="resource-type">Video Guide</span>
-                            <h3>DIY Water Conservation</h3>
-                            <p>Step-by-step video tutorials for simple water-saving techniques you can implement at home.</p>
-                            <div class="resource-meta">
-                                <span></span>
-                                <a href="https://www.youtube.com/watch?v=tzQTxYUu9us" class="download-btn">Watch</a>
-                            </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Interactive Tool</span>
+                        <h3>Water Usage Calculator</h3>
+                        <p>Estimate your household or farm water consumption and identify conservation opportunities.</p>
+                        <div class="resource-meta">
+                            <span>Web Tool</span>
+                            <a href="https://watercalculator.org/wfc2/q/household/" class="download-btn">Access</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Training Material</span>
+                        <h3>Rainwater Harvesting Workshop</h3>
+                        <p>Presentation slides and manual from our popular rainwater harvesting training program.</p>
+                        <div class="resource-meta">
+                            <span>ZIP • ---</span>
+                            <a href="https://www.slideshare.net/slideshow/urban-water-quality-issues-rainwater-harvestingmaster-gardener-specialist-training-presentation/584585?from_search=0" class="download-btn">Open</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Emergency Resource</span>
+                        <h3>Drought Emergency Contacts</h3>
+                        <p>Directory of essential services and relief agencies available during drought emergencies.</p>
+                        <div class="resource-meta">
+                            <span></span>
+                            <a href="https://zinwa.co.zw/contact/" class="download-btn">Open</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Additional Resources Section -->
-        <div class="section-header">
-            <h2>Browse by Resource Type</h2>
-            <p>Explore our collection organized by format and content type.</p>
-        </div>
-        
-        <div class="resource-grid-2">
-            
-            <!-- Webinars -->
-            <div class="resource-card">
-                <div class="resource-img">
-                    <i class="fas fa-chart-pie"></i>
+        <!-- For Farmers Tab -->
+        <div id="farmers" class="tabcontent">
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Technical Guide</span>
+                        <h3>Drought-Resistant Farming Techniques</h3>
+                        <p>Practical methods for crop selection, soil management, and water conservation for farmers.</p>
+                        <div class="resource-meta">
+                            <span>PDF • 942KB</span>
+                            <a href="https://www.agric.gov.zw/wordpress/wp-content/uploads/2020/07/ZIMBABWE-drought-mitigation-strategy-27-May-2024.pdf" class="download-btn">Download</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="resource-content">
-                    <h3>Infographics</h3>
-                    <p>Visual representations of drought data and conservation techniques.</p>
-                    <a href="https://spiffy-kataifi-d89ebb.netlify.app" class="download-btn">View Collection</a>
+                
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Guide</span>
+                        <h3>Drought-Resistant Crop Varieties</h3>
+                        <p>Detailed information on crop varieties that perform well under drought conditions.</p>
+                        <div class="resource-meta">
+                            <span>PDF </span>
+                            <a href="https://irrigationtoolbox.com/ReferenceDocuments/BasicWaterManagement/f1_selecting_crops_for_drought.pdf" class="download-btn">Download</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            
+        </div>
+        
+        <!-- For Households Tab -->
+        <div id="households" class="tabcontent">
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-hand-holding-water"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Guide</span>
+                        <h3>Home Water Conservation</h3>
+                        <p>Simple techniques to reduce water usage in your household during drought periods.</p>
+                        <div class="resource-meta">
+                            <span>article</span>
+                            <a href="https://dcnr.nv.gov/divisions-boards/nevada-drought-forum/drought-conservation/drought-conservation-tips" class="download-btn">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- For Policy Makers Tab -->
+        <div id="policy-makers" class="tabcontent">
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Policy Document</span>
+                        <h3>National Drought Response Framework</h3>
+                        <p>Official government policy document outlining Zimbabwe's approach to drought management.</p>
+                        <div class="resource-meta">
+                            <span>PDF • 3.8MB</span>
+                            <a href="https://www.unccd.int/sites/default/files/country_profile_documents/1%2520FINAL_NDP_Zimbabwe.pdf" class="download-btn">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Emergency Resources Tab -->
+        <div id="emergency" class="tabcontent">
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Emergency Resource</span>
+                        <h3>Drought Emergency Contacts</h3>
+                        <p>Directory of essential services and relief agencies available during drought emergencies.</p>
+                        <div class="resource-meta">
+                            <span></span>
+                            <a href="https://zinwa.co.zw/contact/" class="download-btn">Open</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
         </div>
     </main>
 
+    <!-- Footer (matches your main page) -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Zimbabwe Drought Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // Simple category filtering - can be enhanced with actual content filtering
-        document.querySelectorAll('.category-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelector('.category-btn.active').classList.remove('active');
-                this.classList.add('active');
-                // Here you would add actual filtering logic
-            });
-        });
+        // Tab switching function (same as your mitigation page)
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Remove active class from all tab buttons
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Show the current tab and add active class to the button
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 </body>
 </html>
